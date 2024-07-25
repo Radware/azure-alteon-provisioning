@@ -23,6 +23,7 @@
   "RawConfig": {
     "Config": "",
     "ConfigArray": [
+      "/c/sys/singleip dis",
       "/c/sys/access/snmp w",
       "/cfg/sys/ntp/on/prisrv ${ntp_primary_server}/tzone ${ntp_tzone}",
       "/c/sys/ssnmp/auth ena",
