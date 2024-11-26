@@ -2,6 +2,8 @@
 
 This Terraform project deploys an Azure Virtual Network with management, data, and server subnets, network security groups, network interfaces, and a Virtual Machine configured with specific user data.
 
+This setup demonstrate the basic ,without HA, load balancing proxy setup with interface for the client side and another interface for servers side within the data plan, and management interface for the control plane.
+
 ## Prerequisites
 
 - Terraform installed on your local machine.
@@ -121,7 +123,18 @@ ntp_primary_server = "132.163.97.8"
 
 ```
 
-### 4. Initialize Terraform
+### 4. Approve image lisence terms and Initialize Terraform
+
+To avoid the error the error “ResourcePurchaseValidationFailed” ,We need to accept the legal terms for the image before deploying the virtual machine. This is common for third-party or marketplace images in Azure. you may do it using the GUI console 
+	1.	Go to the Azure Marketplace.
+	2.	Search for the image (radware-alteon-va).
+	3.	Navigate to the image details page.
+	4.	Read and accept the legal terms.
+
+or using the following command: 
+```sh
+az vm image terms accept --publisher radware --offer radware-alteon-va --plan radware-alteon-ng-va-ade
+```
 
 Initialize your Terraform working directory, which will download the necessary provider plugins and set up the backend.
 
