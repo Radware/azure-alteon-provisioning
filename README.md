@@ -123,7 +123,7 @@ ntp_primary_server = "132.163.97.8"
 
 ```
 
-### 4. Approve image lisence terms and Initialize Terraform
+### 4. Approve image license terms and initialize Terraform
 
 To avoid the error the error “ResourcePurchaseValidationFailed” ,We need to accept the legal terms for the image before deploying the virtual machine. This is common for third-party or marketplace images in Azure. you may do it using the GUI console 
 	1.	Go to the Azure Marketplace.
